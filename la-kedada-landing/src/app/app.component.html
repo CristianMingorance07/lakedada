@@ -130,21 +130,23 @@
   <h2>¿Listo para decirnos algo?</h2>
   <p class="contact-intro">¡No te cortes! Escribe tus dudas, ideas, o el mejor chiste de motor que tengas. Nos encanta leer de todo 🚗💨</p>
 
-  <form class="contact-form">
+  <!-- Modificación del formulario -->
+  <form class="contact-form" (submit)="sendEmail($event)">
     <div class="form-group">
       <label for="name">Nombre</label>
-      <input type="text" id="name" placeholder="¿Cómo te llamas?">
+      <input type="text" id="name" name="from_name" placeholder="¿Cómo te llamas?" required>
     </div>
     <div class="form-group">
       <label for="email">Email</label>
-      <input type="email" id="email" placeholder="¿Cuál es tu email?">
+      <input type="email" id="email" name="reply_to" placeholder="¿Cuál es tu email?" required>
     </div>
     <div class="form-group">
       <label for="message">Mensaje</label>
-      <textarea id="message" placeholder="Escríbenos algo..."></textarea>
+      <textarea id="message" name="message" placeholder="Escríbenos algo..." required></textarea>
     </div>
     <button type="submit">¡Enviar Mensaje!</button>
   </form>
+
 
   <!-- Elementos decorativos para el fondo -->
   <div class="bubble bubble1"></div>
