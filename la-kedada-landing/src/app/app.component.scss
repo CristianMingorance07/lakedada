@@ -1,0 +1,572 @@
+// Variables de Color
+$primary-color: #FF4C4C;
+$secondary-color: #333333;
+$accent-color: #F3F3F3;
+$white-color: #FFFFFF;
+
+// Estilos Generales
+body {
+  font-size: 16px;
+}
+
+// Banner
+.banner {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+
+  .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  .logo-container {
+    position: absolute;
+    top: 20px;
+    right: 17px;
+    z-index: 2;
+
+    .logo {
+      width: 100px;
+      opacity: 0.9;
+      transition: transform 0.3s ease-in-out;
+      border-radius: 12px;
+
+      &:hover {
+        transform: scale(1.1) rotate(5deg);
+      }
+    }
+  }
+
+  .banner-content {
+    position: relative;
+    z-index: 2;
+    color: $white-color;
+
+    h1 {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 9rem;
+      font-weight: 700;
+      color: $primary-color;
+      margin: 0;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      line-height: 1.2;
+      text-shadow: -4px 5px 6px rgba(0, 0, 0, 0.9);
+
+      &:hover {
+        color: $white-color;
+        transition: color 0.3s ease;
+      }
+    }
+
+    p {
+      font-size: 1.5rem;
+      color: #e0e0e0;
+      margin: 15px 0;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .cta-button {
+      background-color: $primary-color;
+      color: $white-color;
+      padding: 12px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      font-family: 'Poppins', sans-serif;
+      transition: background-color 0.3s, transform 0.3s ease-in-out;
+      box-shadow: 0 8px 20px rgba(255, 76, 76, 0.3);
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+        transform: translateY(-3px);
+        box-shadow: 0 12px 30px rgba(255, 76, 76, 0.5);
+      }
+    }
+  }
+}
+
+// Sección Sobre Nosotros
+.about {
+  padding: 80px 40px;
+  display: flex;
+  gap: 40px;
+  text-align: left;
+  background-color: #F7F7F7;
+
+  .about-content {
+    flex: 1;
+
+    h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.8rem;
+      color: $secondary-color;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+
+    .intro {
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-bottom: 25px;
+      color: #3c3c3c;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .about-details {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .detail {
+        h3 {
+          font-size: 1.8rem;
+          color: #ee7b84;
+          font-family: 'Poppins', sans-serif;
+          margin-bottom: 10px;
+        }
+
+        p {
+          font-size: 1.1rem;
+          color: #444444;
+          line-height: 1.6;
+        }
+      }
+    }
+  }
+
+  .about-images {
+    display: flex;
+    gap: 15px;
+    flex: 1;
+
+    .about-image {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+// Sección de Temas Principales
+.features {
+  padding: 60px 40px;
+  background-color: #f9f9f9;
+  text-align: center;
+
+  h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    color: $secondary-color;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+  }
+
+  .feature-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .feature-card {
+    background-color: $white-color;
+    padding: 25px;
+    border-radius: 10px;
+    width: 280px;
+    text-align: left;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+
+    h3 {
+      font-size: 1.6rem;
+      color: #515473;
+      font-family: 'Poppins', sans-serif;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #444444;
+    }
+  }
+}
+
+// Testimonios
+.testimonials {
+  padding: 80px 40px;
+  background-color: #F7F7F7;
+  text-align: center;
+
+  .testimonial-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .testimonial-card {
+    background-color: $white-color;
+    border-radius: 10px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+}
+
+// Galería
+.gallery {
+  padding: 80px 40px;
+  background-color: #f9f9f9;
+  text-align: center;
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 15px;
+    justify-items: center;
+  }
+
+  .gallery-item {
+    width: 100%;
+    padding-top: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+// Sección de Contacto
+.contact-section {
+  padding: 80px 40px;
+  background-color: #f7f9fc;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+
+  h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    color: #333333;
+    margin-bottom: 20px;
+  }
+
+  .contact-intro {
+    font-size: 1.2rem;
+    color: #555555;
+    margin-bottom: 40px;
+  }
+
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+
+    .form-group {
+      margin-bottom: 20px;
+      text-align: left;
+
+      label {
+        display: block;
+        font-size: 1rem;
+        color: #333333;
+        margin-bottom: 5px;
+      }
+
+      input, textarea {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        font-size: 1rem;
+        outline: none;
+        transition: border-color 0.3s ease;
+
+        &:focus {
+          border-color: #e63946;
+        }
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 100px;
+      }
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      background-color: #e63946;
+      color: #ffffff;
+      font-size: 1.2rem;
+      font-family: 'Poppins', sans-serif;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+
+      &:hover {
+        background-color: #d0283d;
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  /* Estilos de las burbujas de fondo */
+  .bubble {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.2;
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .bubble1 {
+    width: 100px;
+    height: 100px;
+    background-color: #e63946;
+    bottom: 10%;
+    left: 5%;
+    animation-delay: 0s;
+  }
+
+  .bubble2 {
+    width: 150px;
+    height: 150px;
+    background-color: #405DE6;
+    top: 20%;
+    right: 10%;
+    animation-delay: 2s;
+  }
+
+  .bubble3 {
+    width: 80px;
+    height: 80px;
+    background-color: #FFDC80;
+    bottom: 15%;
+    right: 15%;
+    animation-delay: 4s;
+  }
+}
+
+/* Animación de flotación para las burbujas */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+// Social Floating
+.social-floating {
+  position: fixed;
+  top: 80%;
+  right: 15px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1000;
+
+  .social-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    background-color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    animation: slideIn 1s forwards;
+
+    /* Animación de secuencia para cada icono */
+    &:nth-child(1) {
+      animation-delay: 0.2s;
+    }
+
+    &:nth-child(2) {
+      animation-delay: 0.4s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+
+    &:nth-child(4) {
+      animation-delay: 0.8s;
+    }
+
+    &:hover {
+      transform: scale(1.2); /* Ampliación en hover */
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  /* Colores específicos para cada red social */
+  .spotify {
+    background-color: #1DB954;
+  }
+
+  .youtube {
+    background-color: #FF0000;
+  }
+
+  .instagram {
+    background: linear-gradient(45deg, #405DE6, #C13584, #F56040, #FFDC80);
+  }
+
+  .tiktok {
+    background-color: #000;
+    color: #69C9D0; /* Color primario de TikTok */
+  }
+}
+
+/* Animación de entrada desde la izquierda */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Media Queries
+
+@media (max-width: 1024px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social-floating {
+    top: 80%;
+    right: 10px;
+
+    .social-icon {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    height: 100vh;
+
+  }
+
+  .banner .banner-content h1 {
+    font-size: 6rem;
+  }
+
+  .features .feature-list,
+  .testimonial-list {
+    flex-direction: column;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-section {
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner .banner-content h1 {
+    font-size: 4rem;
+  }
+  .banner .banner-content p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+  }
+
+  .banner .logo-container .logo {
+    display: none;
+  }
+
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  .about h2,
+  .features h2,
+  .testimonials h2,
+  .gallery h2 {
+    font-size: 2rem;
+  }
+  .about .about-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .about .about-content .intro {
+    font-size: 1.4rem;
+  }
+  .about .about-content .about-details .detail h3 {
+    font-size: 1.4rem;
+  }
+
+
+  .features .feature-card h3 {
+    font-size: 1.4rem;
+  }
+  .features h2 {
+    font-size: 1.8rem;
+  }
+
+  .social-floating {
+    top: 87%;
+    right: 10px;
+  }
+}

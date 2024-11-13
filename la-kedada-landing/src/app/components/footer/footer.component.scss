@@ -1,0 +1,29 @@
+.footer {
+  background-color: #1a1a1a; /* Secondary color */
+  color: #ffffff; /* White color */
+  padding: 20px;
+  text-align: center;
+
+  p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+  .social-links {
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+
+    a {
+      color: #f05454; /* Primary color */
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #d04343;
+      }
+    }
+  }
+}

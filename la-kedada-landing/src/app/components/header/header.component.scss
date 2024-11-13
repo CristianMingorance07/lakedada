@@ -1,0 +1,40 @@
+.header {
+  background-color: #1f2d38; /* Color de fondo del header */
+  color: #ffffff; /* Color del texto */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  .logo {
+    background-color: #1a1a1a; /* Mismo color que el header */
+    padding: 5px; /* Añade un margen interno para suavizar el borde */
+    border-radius: 18px; /* Añade bordes redondeados para suavizar */
+
+    img {
+      display: block;
+      width: 150px; /* Tamaño del logo */
+      height: auto;
+      border-radius: 20px;
+    }
+  }
+
+  .navigation {
+    display: flex;
+    gap: 30px;
+
+    a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #f05454; /* Color de hover */
+      }
+    }
+  }
+}

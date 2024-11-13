@@ -1,0 +1,81 @@
+/* Estilos Globales */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333333;
+  background-color: #FFFFFF;
+  line-height: 1.6;
+}
+
+
+/* Encabezados */
+h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #f05454; /* Primary color */
+}
+
+h2 {
+  font-size: 3rem;
+  color: #f05454; /* Primary color */
+}
+
+p {
+  font-size: 1.2rem;
+  color: #333333; /* Text color */
+}
+
+/* Botones Generales */
+button {
+  background-color: #f05454; /* Primary color */
+  color: #ffffff; /* White color */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #d04343;
+  }
+}
+
+/* Links Globales */
+a {
+  color: #f05454; /* Primary color */
+  text-decoration: none;
+  transition: color 0.3s;
+
+  &:hover {
+    color: #d04343;
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  button {
+    padding: 8px 16px;
+  }
+}
